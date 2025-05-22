@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AR.js</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@latest/aframe/build/aframe-ar.min.js"></script>
+    <style>
+        #btn-back {
+            height: 40px;
+            width: 180px;
+            outline: none;
+            background: #8e8ee5;
+            color: white;
+            border-radius: 80px;
+            font-weight: bold;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            z-index: 9999; 
+        }
+    </style>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <button id="btn-back" onclick="window.location.href='file:///C:/Users/aryok/Desktop/HTML/index.html'">
+        Volver a PRANT
+    </button>
+
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-entity 
+                gltf-model="https://raw.githubusercontent.com/Koko-duck/visualcode/main/miniature-pinscher-3d-model/scene.gltf" 
+                position="0 0.5 0"
+                rotation="45 180 0"  
+                scale="0.5 0.5 0.5">
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
